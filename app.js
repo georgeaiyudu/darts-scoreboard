@@ -125,12 +125,12 @@ bot.dialog('/throw', [
     function (session, results) {
         if(session.userData.inplay === 1)
         {
-            session.userData.player1requires - results.response;
+            session.userData.player1requires -= results.response;
             session.userData.inplay = 2;  
         }
         else
         {
-            session.userData.player2requires - results.response;;
+            session.userData.player2requires -= results.response;;
             session.userData.inplay = 1;
         }
         session.beginDialog('/throw');        
